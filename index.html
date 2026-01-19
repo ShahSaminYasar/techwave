@@ -107,24 +107,43 @@
     <main>
       <!-- Hero Section -->
       <section
-        class="section bg-[url('./assets/hero-bg.png')] bg-cover bg-no-repeat bg-center"
-        style="padding-top: 100px"
+        class="section bg-[url('./assets/hero-bg.png')] bg-no-repeat bg-center"
+        style="padding-top: 100px; background-size: 100% 100%"
       >
-        <div class="container flex flex-col items-center justify-center gap-10">
+        <div
+          class="container flex flex-col items-center justify-center gap-3 sm:gap-12"
+        >
           <!-- Hero Img -->
           <div
-            class="bg-[url('./assets/hero-circle.png')] bg-center bg-contain bg-no-repeat w-[350px] aspect-square p-16 grid place-items-center"
+            class="bg-[url('./assets/hero-circle.png')] bg-center bg-contain bg-no-repeat w-[220px] sm:w-[350px] aspect-square p-10 grid place-items-center relative"
           >
             <img
               src="./assets/microphone.png"
               alt="Microphone"
-              class="h-full"
+              class="h-[50%] sm:h-[60%]"
             />
+
+            <!-- Badge -->
+            <div class="absolute top-4 right-4">
+              <span
+                class="block absolute top-0 left-0 bg-(--color-accent)/60 w-full h-full rounded-full scale-x-115 scale-y-123 animate-pulse"
+              ></span>
+              <span
+                class="relative block w-fit py-2 px-4 rounded-full bg-(--color-accent) text-(--color-primary) text-lg font-semibold z-10"
+                style="box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5)"
+              >
+                NEW
+              </span>
+            </div>
           </div>
 
           <!-- Content -->
           <div class="text-center">
-            <h1 class="text-6xl font-extrabold">TechWave</h1>
+            <h1
+              class="text-[40px] leading-12 sm:leading-16 sm:text-6xl font-extrabold"
+            >
+              TechWave
+            </h1>
             <p class="text-sm text-white/80 mb-6 mt-4">
               Your daily dose of tech insights, productivity hacks, and personal
               growth
