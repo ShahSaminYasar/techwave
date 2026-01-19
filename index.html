@@ -22,17 +22,21 @@
     <header class="bg-(--color-primary) w-full px-4 py-4">
       <div class="container flex items-center justify-between gap-5">
         <!-- Logo -->
-        <a href="#" class="text-white font-bold text-2xl">
+        <a href="#" class="text-white font-bold text-4xl">
           Tech<span class="bg-gradient-primary-text-clip leading-0">Wave</span>
         </a>
 
         <!-- Nav -->
-        <nav
-          class="flex items-center justify-center gap-8 text-white text-sm font-medium capitalize"
-        >
-          <a href="#" class="hover:text-(--color-accent)">About</a>
-          <a href="#" class="hover:text-(--color-accent)">Episodes</a>
-          <a href="#" class="hover:text-(--color-accent)">Host</a>
+        <nav class="w-full">
+          <ul
+            class="flex items-center justify-center gap-8 text-white text-sm font-medium capitalize list-none"
+          >
+            <li><a href="#" class="hover:text-(--color-accent)">About</a></li>
+            <li>
+              <a href="#" class="hover:text-(--color-accent)">Episodes</a>
+            </li>
+            <li><a href="#" class="hover:text-(--color-accent)">Host</a></li>
+          </ul>
         </nav>
 
         <!-- CTA -->
@@ -66,7 +70,7 @@
 
           <!-- Content -->
           <div class="text-center">
-            <h1 class="text-[60px] font-extrabold">TechWave</h1>
+            <h1 class="text-6xl font-extrabold">TechWave</h1>
             <p class="text-sm text-white/80 mb-6">
               Your daily dose of tech insights, productivity hacks, and personal
               growth
@@ -441,6 +445,56 @@
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer
+      class="section bg-[url('./assets/footer-bg.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <div class="container flex flex-col justify-center items-center gap-8">
+        <a href="#" class="text-white font-bold text-6xl">
+          Tech<span class="bg-gradient-primary-text-clip leading-0">Wave</span>
+        </a>
+
+        <div class="flex flex-row items-center gap-10 justify-center">
+          <a
+            href="#"
+            class="flex items-center gap-2 text-sm text-white/60 font-medium hover:text-white"
+          >
+            <img src="./assets/spotify.png" alt="Spotify logo" width="20px" />
+            Spotify
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-sm text-white/60 font-medium hover:text-white"
+          >
+            <img
+              src="./assets/apple-podcast.png"
+              alt="Apple Products logo"
+              width="20px"
+            />
+            Apple Podcasts
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-sm text-white/60 font-medium hover:text-white"
+          >
+            <img
+              src="./assets/youtube-podcast.png"
+              alt="YouTube logo"
+              width="20px"
+            />
+            YouTube
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-sm text-white/60 font-medium hover:text-white"
+          >
+            <img src="./assets/twitter.png" alt="Twitter logo" width="20px" />
+            Twitter
+          </a>
+        </div>
+        <p class="text-center text-sm text-white/60 font-normal">
+          &copy; 2026 TechWave Podcast. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
