@@ -43,7 +43,7 @@ html {
 
 .section {
   width: 100%;
-  padding: 120px 16px;
+  padding: 40px 16px;
 }
 
 .container {
@@ -68,6 +68,10 @@ html {
 
 /* Medium Screens */
 @media screen and (min-width: 640px) {
+  .section {
+    padding: 120px 16px;
+  }
+
   .section-title {
     font-size: 43px;
     font-weight: 700;

@@ -52,7 +52,7 @@
         </a>
 
         <!-- Mobile Menu -->
-        <div class="block sm:hidden group relative w-full">
+        <div class="block sm:hidden group relative z-40 w-full">
           <button class="cursor-pointer block ml-auto w-fit">
             <img
               src="./assets/hamburger-menu.png"
@@ -107,29 +107,29 @@
     <main>
       <!-- Hero Section -->
       <section
-        class="section bg-[url('./assets/hero-bg.png')] bg-no-repeat bg-center"
-        style="padding-top: 100px; background-size: 100% 100%"
+        class="px-4 py-10 sm:pb-[120px] sm:pt-[100px] bg-[url('./assets/sm-hero-bg.png')] sm:bg-[url('./assets/hero-bg.png')] bg-no-repeat bg-center"
+        style="background-size: 100% 100%"
       >
         <div
           class="container flex flex-col items-center justify-center gap-3 sm:gap-12"
         >
           <!-- Hero Img -->
           <div
-            class="bg-[url('./assets/hero-circle.png')] bg-center bg-contain bg-no-repeat w-[220px] sm:w-[350px] aspect-square p-10 grid place-items-center relative"
+            class="bg-[url('./assets/hero-circle.png')] bg-center bg-contain bg-no-repeat w-[180px] sm:w-[350px] aspect-square p-10 grid place-items-center relative -mb-4"
           >
             <img
               src="./assets/microphone.png"
               alt="Microphone"
-              class="h-[50%] sm:h-[60%]"
+              class="h-[43%] sm:h-[60%]"
             />
 
             <!-- Badge -->
-            <div class="absolute top-4 right-4">
+            <div class="absolute top-8 right-2 sm:top-4 sm:right-4">
               <span
                 class="block absolute top-0 left-0 bg-(--color-accent)/60 w-full h-full rounded-full scale-x-115 scale-y-123 animate-pulse"
               ></span>
               <span
-                class="relative block w-fit py-2 px-4 rounded-full bg-(--color-accent) text-(--color-primary) text-lg font-semibold z-10"
+                class="relative block w-fit py-2 px-4 rounded-full bg-(--color-accent) text-(--color-primary) text-sm sm:text-lg font-semibold z-10"
                 style="box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5)"
               >
                 NEW
@@ -234,7 +234,7 @@
 
           <!-- Perks Grid -->
           <div
-            class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-3 gap-[30px] mt-10"
+            class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-3 gap-4 md:gap-[30px] mt-5 sm:mt-10"
           >
             <!-- Perk Card -->
             <div
@@ -338,7 +338,7 @@
 
           <!-- Episode Cards -->
           <div
-            class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-[30px] mt-10"
+            class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-[30px] mt-5 sm:mt-10"
           >
             <!-- Episode Card -->
             <div
@@ -467,12 +467,14 @@
       </section>
 
       <!-- Host Section -->
-      <section class="section bg-(--color-primary)" style="padding-top: 0px">
+      <section
+        class="px-4 pb-10 pt-7 sm:pb-[120px] sm:pt-0 bg-(--color-primary)"
+      >
         <div class="container">
           <h2 class="section-title">Meet the host</h2>
 
           <div
-            class="w-full bg-[#2a0f4d] flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 rounded-3xl sm:rounded-[40px] p-6 sm:p-10 mt-10 text-center sm:text-left"
+            class="w-full bg-[#2a0f4d] flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 rounded-3xl sm:rounded-[40px] p-6 sm:p-10 mt-6 sm:mt-10 text-center sm:text-left"
           >
             <img
               src="./assets/host.png"
@@ -531,14 +533,16 @@
 
     <!-- Footer -->
     <footer
-      class="section bg-[url('./assets/footer-bg.png')] bg-cover bg-center bg-no-repeat"
+      class="section bg-[url('./assets/footer-bg.png')] bg-center bg-no-repeat bg-size-[100%_100%] md:bg-cover"
     >
       <div class="container flex flex-col justify-center items-center gap-8">
-        <a href="#" class="text-white font-bold text-6xl">
+        <a href="#" class="text-white font-bold text-5xl sm:text-6xl">
           Tech<span class="bg-gradient-primary-text-clip leading-0">Wave</span>
         </a>
 
-        <div class="flex flex-row items-center gap-10 justify-center">
+        <div
+          class="w-full max-w-[320px] mx-auto sm:max-w-full flex flex-row items-center gap-x-4 gap-y-5 sm:gap-10 justify-center flex-wrap"
+        >
           <a
             href="#"
             class="flex items-center gap-2 text-sm text-white/60 font-medium hover:text-white"
@@ -576,6 +580,9 @@
             Twitter
           </a>
         </div>
+
+        <hr class="w-full max-w-[500px] border-none h-px bg-white/10 my-0" />
+
         <p class="text-center text-sm text-white/60 font-normal">
           &copy; 2026 TechWave Podcast. All rights reserved.
         </p>
