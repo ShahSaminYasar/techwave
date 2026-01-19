@@ -8,6 +8,10 @@
   --color-text: #ffffff;
 }
 
+* {
+  transition: all 150ms;
+}
+
 .font-inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
