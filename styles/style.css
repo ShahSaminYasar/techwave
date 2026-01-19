@@ -55,12 +55,24 @@ html {
 .section-title {
   display: block;
   text-align: center;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
+  line-height: 39px;
   text-transform: capitalize;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .text-sm {
   font-size: 14px;
+}
+
+/* Medium Screens */
+@media screen and (min-width: 640px) {
+  .section-title {
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 58px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+  }
 }
