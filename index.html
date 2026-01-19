@@ -46,7 +46,50 @@
     </header>
 
     <!-- Main -->
-    <main></main>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="section bg-[url('./assets/hero-bg.png')] bg-cover bg-no-repeat bg-center"
+        style="padding-top: 100px"
+      >
+        <div class="container flex flex-col items-center justify-center gap-10">
+          <!-- Hero Img -->
+          <div
+            class="bg-[url('./assets/hero-circle.png')] bg-center bg-contain bg-no-repeat w-[350px] aspect-square p-16 grid place-items-center"
+          >
+            <img
+              src="./assets/microphone.png"
+              alt="Microphone"
+              class="h-full"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="text-center">
+            <h1 class="text-[60px] font-extrabold">TechWave</h1>
+            <p class="text-sm text-white/80 mb-6">
+              Your daily dose of tech insights, productivity hacks, and personal
+              growth
+            </p>
+            <div class="flex gap-2 items-center justify-center">
+              <a
+                href="#"
+                class="px-4 py-3 rounded-[10000000px] text-sm font-semibold flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[104%] hover:shadow-[0px_0px_30px_#f708b6] active:scale-[97%] duration-300"
+              >
+                <i class="fa-brands fa-spotify"></i> Listen on spotify
+              </a>
+
+              <a
+                href="#"
+                class="px-4 py-2.5 rounded-full text-sm font-semibold flex items-center justify-center gap-1 bg-transparent text-(--color-accent) border border-(--color-accent) hover:bg-(--color-accent) hover:text-(--color-primary)"
+              >
+                <i class="fa-regular fa-envelope"></i> Subscribe
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer></footer>
