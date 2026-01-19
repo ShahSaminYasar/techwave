@@ -8,6 +8,10 @@
   --color-text: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   transition: all 150ms;
 }
