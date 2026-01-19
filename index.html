@@ -19,15 +19,19 @@
   </head>
   <body class="font-inter bg-(--color-secondary) text-white">
     <!-- Header -->
-    <header class="bg-(--color-primary) w-full px-4 py-4">
-      <div class="container flex items-center justify-between gap-5">
+    <header
+      class="bg-(--color-primary) w-full px-4 py-4 border-b border-[#412567]"
+    >
+      <div
+        class="container grid grid-cols-2 sm:grid-cols-5 items-center justify-between gap-5"
+      >
         <!-- Logo -->
-        <a href="#" class="text-white font-bold text-4xl">
+        <a href="#" class="text-white font-bold text-3xl md:text-4xl">
           Tech<span class="bg-gradient-primary-text-clip leading-0">Wave</span>
         </a>
 
         <!-- Nav -->
-        <nav class="w-full">
+        <nav class="w-full hidden sm:block sm:col-span-3">
           <ul
             class="flex items-center justify-center gap-8 text-white text-sm font-medium capitalize list-none"
           >
@@ -42,10 +46,60 @@
         <!-- CTA -->
         <a
           href="#"
-          class="px-4 py-3 rounded-full text-sm font-semibold flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[90%] hover:shadow-[0px_0px_26px_#f708b6] active:scale-[85%] duration-300"
+          class="hidden w-fit ml-auto px-4 py-3 rounded-full text-sm font-semibold sm:flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[90%] hover:shadow-[0px_0px_26px_#f708b6] active:scale-[85%] duration-300"
         >
           Subscribe <i class="fa-solid fa-arrow-right"></i>
         </a>
+
+        <!-- Mobile Menu -->
+        <div class="block sm:hidden group relative w-full">
+          <button class="cursor-pointer block ml-auto w-fit">
+            <img
+              src="./assets/hamburger-menu.png"
+              alt="Mobile menu button"
+              class="w-6"
+            />
+          </button>
+
+          <nav
+            class="opacity-0 pointer-events-none top-[300%] group-focus-within:opacity-100 group-focus-within:pointer-events-auto group-focus-within:top-[200%] w-full max-w-[370px] p-4 bg-(--color-secondary) absolute right-0 rounded-xl"
+          >
+            <ul
+              class="flex flex-col w-full items-center justify-center text-white text-sm font-medium capitalize list-none"
+            >
+              <li class="block w-full">
+                <a
+                  href="#"
+                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary)"
+                  >About</a
+                >
+              </li>
+              <li class="block w-full">
+                <a
+                  href="#"
+                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary)"
+                  >Episodes</a
+                >
+              </li>
+              <li class="block w-full">
+                <a
+                  href="#"
+                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary)"
+                  >Host</a
+                >
+              </li>
+
+              <li class="w-full">
+                <a
+                  href="#"
+                  class="mt-2 px-4 py-3 rounded-full text-sm font-semibold flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[90%] hover:shadow-[0px_0px_26px_#f708b6] active:scale-[85%] duration-300"
+                >
+                  Subscribe <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -71,7 +125,7 @@
           <!-- Content -->
           <div class="text-center">
             <h1 class="text-6xl font-extrabold">TechWave</h1>
-            <p class="text-sm text-white/80 mb-6">
+            <p class="text-sm text-white/80 mb-6 mt-4">
               Your daily dose of tech insights, productivity hacks, and personal
               growth
             </p>
