@@ -17,7 +17,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body class="font-inter bg-(--color-secondary) text-white">
+  <body class="font-inter bg-(--color-primary) text-white">
     <!-- Header -->
     <header
       class="bg-(--color-primary) w-full px-4 py-4 border-b border-[#412567]"
@@ -35,18 +35,24 @@
           <ul
             class="flex items-center justify-center gap-8 text-white text-sm font-medium capitalize list-none"
           >
-            <li><a href="#" class="hover:text-(--color-accent)">About</a></li>
             <li>
-              <a href="#" class="hover:text-(--color-accent)">Episodes</a>
+              <a href="#about" class="hover:text-(--color-accent)">About</a>
             </li>
-            <li><a href="#" class="hover:text-(--color-accent)">Host</a></li>
+            <li>
+              <a href="#episodes" class="hover:text-(--color-accent)"
+                >Episodes</a
+              >
+            </li>
+            <li>
+              <a href="#host" class="hover:text-(--color-accent)">Host</a>
+            </li>
           </ul>
         </nav>
 
         <!-- CTA -->
         <a
           href="#"
-          class="hidden w-fit ml-auto px-4 py-3 rounded-full text-sm font-semibold sm:flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[90%] hover:shadow-[0px_0px_26px_#f708b6] active:scale-[85%] duration-300"
+          class="hidden w-fit ml-auto px-4 py-3 rounded-full text-sm font-semibold sm:flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[90%] hover:shadow-[0px_0px_26px_#f708b6] active:shadow-[0px_0px_26px_#f708b6] active:scale-[85%] duration-300"
         >
           Subscribe <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -69,22 +75,22 @@
             >
               <li class="block w-full">
                 <a
-                  href="#"
-                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary)"
+                  href="#about"
+                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary) active:bg-(--color-primary)"
                   >About</a
                 >
               </li>
               <li class="block w-full">
                 <a
-                  href="#"
-                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary)"
+                  href="#episodes"
+                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary) active:bg-(--color-primary)"
                   >Episodes</a
                 >
               </li>
               <li class="block w-full">
                 <a
-                  href="#"
-                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary)"
+                  href="#host"
+                  class="block p-3 rounded-lg bg-(--color-secondary) hover:bg-(--color-primary) active:bg-(--color-primary)"
                   >Host</a
                 >
               </li>
@@ -92,7 +98,7 @@
               <li class="w-full">
                 <a
                   href="#"
-                  class="mt-2 px-4 py-3 rounded-full text-sm font-semibold flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[90%] hover:shadow-[0px_0px_26px_#f708b6] active:scale-[85%] duration-300"
+                  class="mt-2 px-4 py-3 rounded-full text-sm font-semibold flex items-center justify-center gap-1 bg-gradient-primary text-white hover:scale-[90%] hover:shadow-[0px_0px_26px_#f708b6] active:shadow-[0px_0px_26px_#f708b6] active:scale-[85%] duration-300"
                 >
                   Subscribe <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -107,29 +113,34 @@
     <main>
       <!-- Hero Section -->
       <section
-        class="px-4 py-10 sm:pb-[120px] sm:pt-[100px] bg-[url('./assets/sm-hero-bg.png')] sm:bg-[url('./assets/hero-bg.png')] bg-no-repeat bg-center"
+        class="px-4 py-10 sm:pb-[120px] sm:pt-[100px] bg-[url('./assets/hero-bg.png')] bg-no-repeat bg-position-[0%_-35px] sm:bg-center"
         style="background-size: 100% 100%"
       >
         <div
-          class="container flex flex-col items-center justify-center gap-3 sm:gap-12"
+          class="container flex flex-col items-center justify-center gap-6 sm:gap-10"
         >
           <!-- Hero Img -->
           <div
-            class="bg-[url('./assets/hero-circle.png')] bg-center bg-contain bg-no-repeat w-[180px] sm:w-[350px] aspect-square p-10 grid place-items-center relative -mb-4"
+            class="relative w-full max-w-[180px] sm:max-w-[270px] md:max-w-[340px] aspect-square"
           >
+            <img
+              src="./assets/hero-circle.png"
+              alt="Hero Image BG Gradient Circle"
+              class="absolute top-1/2 left-1/2 -translate-1/2 w-full animate-spin"
+              style="animation-duration: 10000ms"
+            />
             <img
               src="./assets/microphone.png"
               alt="Microphone"
-              class="h-[43%] sm:h-[60%]"
+              class="absolute top-1/2 left-1/2 -translate-1/2 h-1/2"
             />
-
             <!-- Badge -->
-            <div class="absolute top-8 right-2 sm:top-4 sm:right-4">
+            <div class="absolute top-3 right-1 sm:top-4 sm:right-4">
               <span
-                class="block absolute top-0 left-0 bg-(--color-accent)/60 w-full h-full rounded-full scale-x-115 scale-y-123 animate-pulse"
+                class="block absolute top-0 left-0 bg-(--color-accent)/60 w-full h-full rounded-full animate-badge-pulse"
               ></span>
               <span
-                class="relative block w-fit py-2 px-4 rounded-full bg-(--color-accent) text-(--color-primary) text-sm sm:text-lg font-semibold z-10"
+                class="relative block w-fit py-1 px-2 sm:py-2 sm:px-4 rounded-full bg-(--color-accent) text-(--color-primary) text-xs sm:text-lg font-semibold z-10"
                 style="box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5)"
               >
                 NEW
@@ -158,7 +169,7 @@
 
               <a
                 href="#"
-                class="px-4 py-2.5 rounded-full text-sm font-semibold flex items-center justify-center gap-1 bg-transparent text-(--color-accent) border border-(--color-accent) hover:bg-(--color-accent) hover:text-(--color-primary)"
+                class="px-4 py-2.5 rounded-full text-sm font-semibold flex items-center justify-center gap-1 bg-transparent text-(--color-accent) border border-(--color-accent) hover:bg-(--color-accent) active:bg-(--color-accent) hover:text-(--color-primary) active:text-(--color-primary)"
               >
                 <i class="fa-regular fa-envelope"></i> Subscribe
               </a>
@@ -168,10 +179,16 @@
       </section>
 
       <!-- About Section -->
-      <section class="section bg-(--color-primary)" style="padding-top: 20px">
+      <section
+        id="about"
+        class="section bg-(--color-primary)"
+        style="padding-top: 20px"
+      >
         <div class="container text-center">
           <h2 class="section-title">About the podcast</h2>
-          <p class="text-white/80 block w-full max-w-3xl mx-auto text-sm">
+          <p
+            class="text-white/80 block w-full max-w-3xl mx-auto text-sm leading-7"
+          >
             TechWave is your go-to podcast for staying ahead in the fast-paced
             world of technology.<br />We break down complex topics into
             digestible insights, explore productivity strategies that actually
@@ -187,10 +204,10 @@
             <!-- Counter -->
             <div>
               <span
-                class="text-[30px] sm:text-[40px] font-black text-(--color-accent) block mb-1"
+                class="text-[40px] font-black text-(--color-accent) block mb-1"
                 >150K+</span
               >
-              <span class="text-sm text-white uppercase"
+              <span class="text-sm text-white/80 uppercase"
                 >Monthly listeners</span
               >
             </div>
@@ -198,10 +215,10 @@
             <!-- Counter -->
             <div>
               <span
-                class="text-[30px] sm:text-[40px] font-black text-(--color-accent) block mb-1"
+                class="text-[40px] font-black text-(--color-accent) block mb-1"
                 >200+</span
               >
-              <span class="text-sm text-white uppercase"
+              <span class="text-sm text-white/80 uppercase"
                 >Episodes published</span
               >
             </div>
@@ -209,19 +226,23 @@
             <!-- Counter -->
             <div>
               <span
-                class="text-[30px] sm:text-[40px] font-black text-(--color-accent) block mb-1"
+                class="text-[40px] font-black text-(--color-accent) block mb-1"
                 >4.9★</span
               >
-              <span class="text-sm text-white uppercase">Average rating</span>
+              <span class="text-sm text-white/80 uppercase"
+                >Average rating</span
+              >
             </div>
 
             <!-- Counter -->
             <div>
               <span
-                class="text-[30px] sm:text-[40px] font-black text-(--color-accent) block mb-1"
+                class="text-[40px] font-black text-(--color-accent) block mb-1"
                 >50+</span
               >
-              <span class="text-sm text-white uppercase">Industry experts</span>
+              <span class="text-sm text-white/80 uppercase"
+                >Industry experts</span
+              >
             </div>
           </div>
         </div>
@@ -332,7 +353,7 @@
       </section>
 
       <!-- Featured Episodes Section -->
-      <section class="section bg-(--color-primary)">
+      <section id="episodes" class="section bg-(--color-primary)">
         <div class="container">
           <h2 class="section-title">Featured Episodes</h2>
 
@@ -468,6 +489,7 @@
 
       <!-- Host Section -->
       <section
+        id="host"
         class="px-4 pb-10 pt-7 sm:pb-[120px] sm:pt-0 bg-(--color-primary)"
       >
         <div class="container">
@@ -498,19 +520,19 @@
               >
                 <a
                   href="#"
-                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square"
+                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square bg-transparent hover:bg-white/10 duration-75"
                 >
                   <img src="./assets/linkedin.png" alt="LinkedIn" class="w-4" />
                 </a>
                 <a
                   href="#"
-                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square"
+                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square bg-transparent hover:bg-white/10 duration-75"
                 >
                   <img src="./assets/x.png" alt="X" class="w-4" />
                 </a>
                 <a
                   href="#"
-                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square"
+                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square bg-transparent hover:bg-white/10 duration-75"
                 >
                   <img
                     src="./assets/instagram.png"
@@ -520,7 +542,7 @@
                 </a>
                 <a
                   href="#"
-                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square"
+                  class="grid place-content-center border border-[#533c72] rounded-full w-[42px] aspect-square bg-transparent hover:bg-white/10 duration-75"
                 >
                   <img src="./assets/youtube.png" alt="YouTube" class="w-5" />
                 </a>
@@ -533,7 +555,7 @@
 
     <!-- Footer -->
     <footer
-      class="section bg-[url('./assets/footer-bg.png')] bg-center bg-no-repeat bg-size-[100%_100%] md:bg-cover"
+      class="section bg-[url('./assets/footer-bg.png')] bg-size-[150%_140%] sm:bg-size-[190%_135%] md:bg-cover bg-position-[center_-76px] sm:bg-position-[center_-73px] md:bg-center bg-no-repeat"
     >
       <div class="container flex flex-col justify-center items-center gap-8">
         <a href="#" class="text-white font-bold text-5xl sm:text-6xl">
@@ -581,9 +603,9 @@
           </a>
         </div>
 
-        <hr class="w-full max-w-[500px] border-none h-px bg-white/10 my-0" />
+        <!-- <hr class="w-full max-w-[500px] border-none h-px bg-white/10 my-0" /> -->
 
-        <p class="text-center text-sm text-white/60 font-normal">
+        <p class="text-center text-sm text-[rgb(250,250,250)]/60 font-normal">
           &copy; 2026 TechWave Podcast. All rights reserved.
         </p>
       </div>
